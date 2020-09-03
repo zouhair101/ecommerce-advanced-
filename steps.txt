@@ -1,0 +1,25 @@
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/zouhair101/ecommerce-advanced.git // faire liason avec repositeory
+git checkout-b begin
+git push -u origin begin // from local (commit) to banch(begin) 
+git push -u origin master // total
+// setting (set master default)
+
+#######003 install some laravel useful packages for multi vendor , tenancy eCommerce
+// install package astrotomic/laravel-translatable
+	composer require astrotomic/laravel-translatable  // to vendor
+// install package composer require mcamara/laravel-localization // to vendor
+	php artisan vendor:publish --provider="Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider" (from vendor to config)
+#######012upload source code to GitHub branch ,prepare dashboard index -eCommerce multi languages ,tenancy
+git branch
+git status
+git add .
+git commit -a -m="end first branch"
+git push origin begin
+
+
+#########020 edit and update shipping methods part 1 - eCommerce multi languages ,tenancy
+git commit -a -m="begin branch"
+git push origin begin
