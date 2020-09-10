@@ -23,3 +23,12 @@ git push origin begin
 #########020 edit and update shipping methods part 1 - eCommerce multi languages ,tenancy
 git commit -a -m="begin branch"
 git push origin begin
+
+
+
+
+#########23 admin logout admin redirection - eCommerce multi languages ,tenancy
+logout
+profil admin
+
+
