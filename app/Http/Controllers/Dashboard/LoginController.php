@@ -26,6 +26,9 @@ class LoginController extends Controller
           return redirect()->back()->with(['error' => 'هناك خطا بالبيانات']);
 
      }
+
+
+     
      public function logout(){
         $gaurd = $this->getGaurd();
         $gaurd->logout();
@@ -36,5 +39,5 @@ class LoginController extends Controller
       public function getGaurd(){
           return auth('admin');
       }
-     
+
 }
