@@ -18,9 +18,8 @@
     <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
           rel="stylesheet">
 
-          <link rel="stylesheet" type="text/css" href="{{asset('assets/admin//plugins/animate/animate.css')}}">
-    <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/vendors.css')}}">
+     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin//plugins/animate/animate.css')}}">
+     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/vendors.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/css/weather-icons/climacons.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/fonts/meteocons/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/css/charts/morris.css')}}">
@@ -36,7 +35,7 @@
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/app.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/custom-rtl.css')}}"> 
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getFolder().'/custom-rtl.css')}}">
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
     <link rel="stylesheet" type="text/css"
@@ -50,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/css/extensions/timedropper.min.css')}}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/css/style-rtl.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/css/style.css')}}">
     <!-- END Custom CSS-->
     @notify_css
     @yield('style')
@@ -64,13 +63,20 @@
 <body class="vertical-layout vertical-menu 2-columns menu-expanded fixed-navbar"
       data-open="click" data-menu="vertical-menu" data-col="2-columns">
 <!-- fixed-top-->
-@include('dashboard.includes.header')
-<!-- ////////////////////////////////////////////////////////////////////////////-->
-@include('dashboard.includes.sidebar')
 
-@yield('content')
-<!-- ////////////////////////////////////////////////////////////////////////////-->
+<!-- begin header -->
+@include('dashboard.includes.header')
+ <!-- end header -->
+ <!-- begin sidebar -->
+@include('dashboard.includes.sidebare')
+
+  <!-- end sidebar -->
+ @yield('content')
+
+<!-- begin footer html -->
 @include('dashboard.includes.footer')
+
+<!-- end footer -->
 
 @notify_js
 @notify_render
@@ -127,7 +133,6 @@
     });
     $('#meridians2').timeDropper({
         meridians: true,setCurrentTime: false
-
     });
     $('#meridians3').timeDropper({
         meridians: true,
@@ -139,7 +144,6 @@
     });
     $('#meridians5').timeDropper({
         meridians: true,setCurrentTime: false
-
     });
     $('#meridians6').timeDropper({
         meridians: true,setCurrentTime: false
